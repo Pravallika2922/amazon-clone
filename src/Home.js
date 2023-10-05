@@ -1,16 +1,31 @@
 import React from "react";
 import "./Home.css";
 import Product from "./Product";
+import { Carousel } from 'react-responsive-carousel';
+import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const Home = () => {
+  
   return (
     <div className="home">
+    
       <div className="home_container">
-        <img
+      <Carousel autoPlay interval="5000" transitionTime="5000" showThumbs={false}>
+                <div>
+                    <img src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg"  className="home_image"/>
+                    
+                </div>
+                
+                <div>
+                    <img src="https://img.freepik.com/free-vector/flat-design-shopping-center-twitch-banner_23-2149337409.jpg?w=1380&t=st=1696521513~exp=1696522113~hmac=53b2df6b666487c4d6fb8942519615ebf7984852bc51f43b01a3741771120808" className="home_image" />
+                    
+                </div>
+            </Carousel>
+        {/* <img
           src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg"
           alt="amazon prime banner"
           className="home_image"
-        />
+        /> */}
         <div className="home_row">
          <Product id="1" productName="The lean startup" rating={4} productImage="https://m.media-amazon.com/images/I/81-QB7nDh4L._SL1500_.jpg" price={100}/>
          <Product id="2" productName="Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre Glass Bowl" productImage="https://images-na.ssl-images-amazon.com/images/I/81O%2BGNdkzKL._AC_SX450_.jpg" price={230} rating={3} />
